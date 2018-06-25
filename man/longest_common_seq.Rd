@@ -2,13 +2,25 @@
 % Please edit documentation in R/lcs.R
 \name{longest_common_seq}
 \alias{longest_common_seq}
-\title{Title}
+\title{Find longest common subsequence between two strings.}
 \usage{
 longest_common_seq(x, y)
 }
 \arguments{
-\item{x}{}
+\item{x}{character string}
+
+\item{y}{character string}
+}
+\value{
+A longestCommonSeq object.
 }
 \description{
-Title
+Find longest common subsequence between two strings.
+}
+\examples{
+
+longest_common_seq(
+  "Lorem dolor sit amet, consectetur adipiscing elit.",
+  "Lorem ipsum dolor sit amet, eu erat sed felis pharetra.")
+
 }
