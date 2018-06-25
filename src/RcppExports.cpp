@@ -5,18 +5,6 @@
 
 using namespace Rcpp;
 
-// longest_common_backtrack
-NumericMatrix longest_common_backtrack(std::string x, std::string y);
-RcppExport SEXP _stringproc_longest_common_backtrack(SEXP xSEXP, SEXP ySEXP) {
-BEGIN_RCPP
-    Rcpp::RObject rcpp_result_gen;
-    Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< std::string >::type x(xSEXP);
-    Rcpp::traits::input_parameter< std::string >::type y(ySEXP);
-    rcpp_result_gen = Rcpp::wrap(longest_common_backtrack(x, y));
-    return rcpp_result_gen;
-END_RCPP
-}
 // longest_common_subseq
 std::vector<std::string> longest_common_subseq(std::string x, std::string y);
 RcppExport SEXP _stringproc_longest_common_subseq(SEXP xSEXP, SEXP ySEXP) {
@@ -31,7 +19,6 @@ END_RCPP
 }
 
 static const R_CallMethodDef CallEntries[] = {
-    {"_stringproc_longest_common_backtrack", (DL_FUNC) &_stringproc_longest_common_backtrack, 2},
     {"_stringproc_longest_common_subseq", (DL_FUNC) &_stringproc_longest_common_subseq, 2},
     {NULL, NULL, 0}
 };

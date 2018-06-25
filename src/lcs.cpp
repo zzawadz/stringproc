@@ -2,8 +2,6 @@
 #include <string>
 using namespace Rcpp;
 
-
-// [[Rcpp::export]]
 NumericMatrix longest_common_backtrack(std::string x, std::string y) {
 
   NumericMatrix res(x.size() + 1, y.size() + 1);
@@ -45,7 +43,24 @@ std::pair<std::string, std::string> output_lcs(
 
   std::pair<std::string, std::string> result;
 
-  if(i == 0 || j == 0) return result;
+  if(i == 0 && j == 0) return result;
+
+  // some letters in y are still unused
+  if(i > 0 && j == 0) {
+    result =  output_lcs(backtrack, x, y, i - 1, j);
+    result.first += x[i - 1];
+    result.second += "-";
+    return result;
+  }
+
+  // some letters in x are still unused
+  if(i == 0 && j > 0) {
+    result =  output_lcs(backtrack, x, y, i, j - 1);
+    result.first += "-";
+    result.second += y[j - 1];
+    return result;
+  }
+
 
   if(backtrack.at(i,j) == 1) {
    result =  output_lcs(backtrack, x, y, i - 1, j);
