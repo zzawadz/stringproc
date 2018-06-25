@@ -2,5 +2,7 @@
 
 S3method(print,longestCommonSeq)
 export(longest_common_seq)
+export(run_lcs_app)
 importFrom(Rcpp,evalCpp)
+importFrom(shiny,runApp)
 useDynLib(stringproc)

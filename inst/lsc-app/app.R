@@ -1,6 +1,5 @@
-
 library(shiny)
-library(dplyr)
+library(magrittr)
 
 ui <- fluidPage(
 

@@ -78,3 +78,15 @@ print.longestCommonSeq <- function(x) {
   invisible(x)
 
 }
+
+#' Start the app for exploring longest common subsequence between two strings.
+#'
+#' @param ... arguments passed to the shiny's runApp function.
+#'
+#' @export
+#' @importFrom shiny runApp
+#'
+#' @examples
+run_lcs_app <- function(...) {
+  runApp(system.file(package = "stringproc", "lsc-app"), ...)
+}
