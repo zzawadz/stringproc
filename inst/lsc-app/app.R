@@ -1,16 +1,23 @@
 library(shiny)
 library(magrittr)
+library(dplyr)
 
 ui <- fluidPage(
+  h3("Compare strings using longest common subsequence."),
+
+  tags$style(HTML("
+    .shiny-input-container:not(.shiny-input-container-inline) {
+      width: 100%;
+  }")),
 
    checkboxInput("caseSens", label = "Ignore case?", value = TRUE),
    fluidRow(
      column(6,
-        textAreaInput(inputId = "textA", label = "Text A", rows = 10),
+        textAreaInput(inputId = "textA", label = "Text A", rows = 10, value = "Lorem ipsum", width = "100%"),
         htmlOutput("resultA")
      ),
      column(6,
-        textAreaInput(inputId = "textB", label = "Text B", rows = 10),
+        textAreaInput(inputId = "textB", label = "Text B", rows = 10, value = "Lore ipsum", width = "100%"),
         htmlOutput("resultB")
      )
    ),
