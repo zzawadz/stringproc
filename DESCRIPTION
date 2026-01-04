@@ -1,14 +1,18 @@
 Package: stringproc
 Type: Package
-Title: What the Package Does (Title Case)
+Title: String Processing and Longest Common Subsequence
 Version: 0.1.0
 Author: Who wrote it
 Maintainer: The package maintainer <yourself@somewhere.net>
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
+Description: Provides tools for string processing including finding the longest
+    common subsequence between two strings. Includes an interactive Shiny
+    application for visualizing string comparisons.
 License: What license is it under?
 Encoding: UTF-8
 LazyData: true
-Imports: Rcpp (>= 0.12.15), shiny
+Imports:
+    Rcpp (>= 0.12.15),
+    shiny (>= 1.7.0),
+    dplyr (>= 1.0.0)
 LinkingTo: Rcpp
 RoxygenNote: 6.0.1

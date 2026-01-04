@@ -1,5 +1,4 @@
 library(shiny)
-library(magrittr)
 library(dplyr)
 
 ui <- fluidPage(
@@ -69,7 +68,7 @@ server <- function(input, output) {
               colors()[[i]],
               ";display:inline;overflow:hidden;padding: 0px; margin: 0px;")),
           target[[i]]))
-    ) %>% paste(collapse = "")
+    ) |> paste(collapse = "")
 
     HTML(targetHtml)
   })
@@ -89,7 +88,7 @@ server <- function(input, output) {
               colors()[[i]],
               ";display:inline;overflow:hidden;padding: 0px; margin: 0px;")),
           target[[i]]))
-    ) %>% paste(collapse = "")
+    ) |> paste(collapse = "")
     HTML(userValueHtml)
   })
 
