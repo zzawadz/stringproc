@@ -2,12 +2,12 @@ Package: stringproc
 Type: Package
 Title: String Processing and Longest Common Subsequence
 Version: 0.1.0
-Author: Who wrote it
-Maintainer: The package maintainer <yourself@somewhere.net>
+Authors@R: person("Zygmunt", "Zawadzki", email = "zygmunt@zstat.pl", role = c("aut", "cre"))
 Description: Provides tools for string processing including finding the longest
-    common subsequence between two strings. Includes an interactive Shiny
-    application for visualizing string comparisons.
-License: What license is it under?
+    common subsequence between two strings using efficient C++ implementation via Rcpp.
+    Includes an interactive Shiny application for visualizing string comparisons
+    with color-coded output highlighting differences and common sequences.
+License: GPL-3
 Encoding: UTF-8
 LazyData: true
 Imports:
