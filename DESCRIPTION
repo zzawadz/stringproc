@@ -2,7 +2,7 @@ Package: stringproc
 Type: Package
 Title: String Processing and Longest Common Subsequence
 Version: 0.1.0
-Authors@R: person("Package", "Author", email = "author@example.com", role = c("aut", "cre"))
+Authors@R: person("Zygmunt", "Zawadzki", email = "zygmunt@zstat.pl", role = c("aut", "cre"))
 Description: Provides tools for string processing including finding the longest
     common subsequence between two strings using efficient C++ implementation via Rcpp.
     Includes an interactive Shiny application for visualizing string comparisons
